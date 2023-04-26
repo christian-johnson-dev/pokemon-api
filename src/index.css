@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.App {
+  text-align: center;
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+.pokeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.pokeCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pokeCard:hover {
+  /* Add a box shadow to create a raised effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Slightly scale the card on hover */
+  transform: scale(1.05);
+}

@@ -1,20 +1,12 @@
-import { useState, useEffect } from "react";
+import ShowPokemon from "./components/ShowPokemon";
 
 function App() {
-  const [pokemonData, setPokemonData] = useState([]);
-  useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=40")
-      .then((response) => response.json())
-      .then((response) => setPokemonData(response.results));
-  }, []);
-  console.log(pokemonData);
   return (
     <div className="App">
-      <h1>Rollcall</h1>
-      {pokemonData.length > 0 &&
-        pokemonData.map((pokemon) => {
-          return <div key={pokemon.id}>{pokemon.name}</div>;
-        })}
+      <h1>
+        Gimme <span className="strikethrough">some</span> ALL Pokemon.
+      </h1>
+      <ShowPokemon />
     </div>
   );
 }
